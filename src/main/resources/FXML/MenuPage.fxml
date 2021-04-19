@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fms.Controllers.MenuPageController">
+   <children>
+      <Button fx:id="financeMenu" layoutX="127.0" layoutY="173.0" mnemonicParsing="false" onAction="#loadFinanceMenu" prefHeight="55.0" prefWidth="139.0" text="Finance Menu" />
+      <Button fx:id="userMenuButton" layoutX="335.0" layoutY="171.0" mnemonicParsing="false" onAction="#loadUserMenu" prefHeight="55.0" prefWidth="139.0" text="User Menu" />
+      <Label layoutX="196.0" layoutY="45.0" prefHeight="98.0" prefWidth="208.0" text="Future Finance 1.01">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+       <MenuBar layoutX="560.0" layoutY="2.0">
+           <menus>
+               <Menu mnemonicParsing="false" text="X" fx:id="xButton">
+                   <items>
+                       <MenuItem fx:id="saveButton" mnemonicParsing="false" onAction="#saveData" text="save" />
+                       <MenuItem mnemonicParsing="false" onAction="#saveAndExit" text="save and exit" />
+                       <MenuItem fx:id="exitButton" mnemonicParsing="false" onAction="#exitProgram" text="exit" />
+                   </items>
+               </Menu>
+           </menus>
+       </MenuBar>
+   </children>
+</AnchorPane>

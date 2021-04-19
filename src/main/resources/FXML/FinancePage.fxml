@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fms.Controllers.FinanceController">
+   <children>
+      <Button fx:id="addCatButton" layoutX="319.0" layoutY="105.0" mnemonicParsing="false" onAction="#addCategotyAction" prefHeight="31.0" prefWidth="126.0" text="Add Cat" />
+      <TextField fx:id="categoryName" layoutX="316.0" layoutY="30.0" prefHeight="25.0" prefWidth="270.0" promptText="Category Name" />
+      <TextField fx:id="categoryDescription" layoutX="316.0" layoutY="69.0" prefHeight="25.0" prefWidth="270.0" promptText="Category Description" />
+      <Button fx:id="deleteCatButton" layoutX="460.0" layoutY="105.0" mnemonicParsing="false" onAction="#deleteCategoryAction" prefHeight="31.0" prefWidth="126.0" text="Delete Cat" />
+      <Button fx:id="editCatButton" layoutX="319.0" layoutY="146.0" mnemonicParsing="false" onAction="#EditCategory" prefHeight="31.0" prefWidth="126.0" text="Edit/Finance Cat" />
+      <Button fx:id="exitToMenuButton" layoutX="460.0" layoutY="146.0" mnemonicParsing="false" onAction="#exitToMainMenu" prefHeight="31.0" prefWidth="126.0" text="Exit to Menu" />
+      <Label fx:id="selectedCatInfo" layoutX="316.0" layoutY="189.0" prefHeight="189.0" prefWidth="270.0" text="Category info" />
+      <AnchorPane layoutX="22.0" layoutY="18.0" prefHeight="360.0" prefWidth="270.0">
+         <children>
+            <TreeView fx:id="selectionTree" onMousePressed="#getClickedTreeItem" prefHeight="175.0" prefWidth="270.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="2.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="319.0" layoutY="10.0" prefHeight="17.0" prefWidth="88.0" text="Add Category:" />
+      <Label layoutX="120.0" layoutY="2.0" text="Category Tree" />
+      <MenuBar layoutX="560.0" layoutY="2.0" prefHeight="9.0" prefWidth="13.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="X" fx:id="xButton">
+               <items>
+                  <MenuItem fx:id="saveButton" mnemonicParsing="false" onAction="#saveData" text="save" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveAndExit" text="save and exit" />
+                  <MenuItem fx:id="exitButton" mnemonicParsing="false" onAction="#exitProgram" text="exit" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

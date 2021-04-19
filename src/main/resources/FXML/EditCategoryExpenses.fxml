@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane onMouseClicked="#deSelecetExp" prefHeight="368.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fms.Controllers.EditCatControllerExpenses">
+    <children>
+        <AnchorPane layoutX="14.0" layoutY="33.0" prefHeight="243.0" prefWidth="269.0">
+            <children>
+                <ListView fx:id="expenseList" layoutX="4.0" layoutY="3.0" onMouseClicked="#getSelectedExpenseItem" prefHeight="243.0" prefWidth="319.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="317.0" layoutY="38.0" prefHeight="233.0" prefWidth="0.0" />
+        <Button fx:id="editCategoryButton" layoutX="367.0" layoutY="246.0" mnemonicParsing="false" onAction="#editCategoryAction" prefHeight="25.0" prefWidth="240.0" text="Edit" />
+        <TextField fx:id="newCatNameField" layoutX="339.0" layoutY="183.0" prefHeight="25.0" prefWidth="301.0" promptText="New Cat. Name" />
+        <TextField fx:id="newCatDiscriptionField" layoutX="340.0" layoutY="215.0" prefHeight="25.0" prefWidth="301.0" promptText="New Cat. Discription" />
+        <TextField fx:id="newFinanceAmountField" layoutX="276.0" layoutY="327.0" promptText="Amount" />
+        <TextField fx:id="newFinanceNameField" layoutX="19.0" layoutY="327.0" prefHeight="25.0" prefWidth="240.0" promptText="Name" />
+        <Label layoutX="22.0" layoutY="9.0" prefHeight="30.0" prefWidth="138.0" text="Expenses :">
+            <font>
+                <Font name="System Italic" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="selectedCatLabel" layoutX="348.0" layoutY="33.0" prefHeight="150.0" prefWidth="301.0" text="Selected Category" />
+        <Button fx:id="addFinanceButton" layoutX="445.0" layoutY="327.0" mnemonicParsing="false" onAction="#addFinanceAction" prefHeight="25.0" prefWidth="53.0" text="Add" />
+        <Button fx:id="removeFinanceButton" layoutX="566.0" layoutY="327.0" mnemonicParsing="false" onAction="#deleteExpense" prefHeight="25.0" prefWidth="65.0" text="Remove" />
+        <Button fx:id="exitToFinanceButton" layoutX="509.0" layoutY="12.0" mnemonicParsing="false" onAction="#exitToFinanceMenu" prefHeight="25.0" prefWidth="90.0" text="Exit To Menu" />
+        <Button fx:id="incomesMenuButton" layoutX="404.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToIncomesMenu" text="Incomes Menu" />
+        <TextField fx:id="newFinanceNameFieldEdit" layoutX="19.0" layoutY="293.0" prefHeight="25.0" prefWidth="240.0" promptText="Name" />
+        <TextField fx:id="newFinanceAmountFieldEdit" layoutX="276.0" layoutY="293.0" promptText="Amount" />
+        <Button fx:id="editFinanceButton" layoutX="445.0" layoutY="293.0" mnemonicParsing="false" onAction="#editFinanceAction" prefHeight="25.0" prefWidth="53.0" text="Edit" />
+        <MenuBar layoutX="607.0" layoutY="2.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="X" fx:id="xButton">
+                    <items>
+                        <MenuItem fx:id="saveButton" mnemonicParsing="false" onAction="#saveData" text="save" />
+                        <MenuItem mnemonicParsing="false" onAction="#saveAndExit" text="save and exit" />
+                        <MenuItem fx:id="exitButton" mnemonicParsing="false" onAction="#exitProgram" text="exit" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>
